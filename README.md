@@ -66,7 +66,11 @@ Then, you can use the `data_exploration.ipynb` notebook to get familiar with the
 
 
 
-Finally, the `classification.ipynb` notebook performs multi-class classification ('healthy', 'COVID-19', 'symptomatic') using machine learning techniques. It loads the dataset and splits it to 85% train set and 15% test set. It performs forward feature selection to approximate the best subset of features. Then it selects the best model configuration using grid search on the train set, it approximates the performance of the best configuration (trained on the whole training set) with the test set and returns the final model, trained on all the data.
+Finally, the `classification_AUC.ipynb` notebook performs multi-class classification ('healthy', 'COVID-19', 'symptomatic') using machine learning techniques. It loads the dataset and splits it to 85% train set and 15% test set. It performs forward feature selection to approximate the best subset of features. Then it selects the best model configuration using grid search on the train set, it approximates the performance of the best configuration (trained on the whole training set) with the test set and returns the final model, trained on all the data.
+
+
+
+The previous notebook uses `weighted One-vs-Rest ROC-AUC` as a scoring function for feature selection and hyperparameter tuning. The `classification_F1.ipynb` notebook performs the same procedure/pipeline. The only difference is that `weighted F1` is used as a scoring function. This results in better predictions (less affected by class imbalance).
 
 
 
